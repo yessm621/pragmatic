@@ -10,9 +10,9 @@
     {#      <img src="{{ target_article.image.url }}">#}
     <span src="{{ target_article.image }}"></span>
 
-    <p>
-      {{ target_article.content }}
-    </p>
+    <div class="text-left">
+      {{ target_article.content | safe }}
+    </div>
 
     <a href="{% url 'articleapp:update' pk=target_article.pk %}">
       <p>Update Article</p>
